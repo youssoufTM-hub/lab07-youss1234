@@ -26,7 +26,7 @@ def is_sorted(values):
     #   Recursive case: the first two items are in order AND the rest is sorted.
     if len(values) < 2:
         return True
-    if values[0] < values[1]:
+    if values[0] <= values[1]:
         return is_sorted(values[1:])
     else:
         return False
@@ -62,7 +62,7 @@ class Square(Rectangle):   # Part 4 - stretch (optional)
 def main():
     # Optional scratch space - try your work here, then run: python lab07.py
     print(count_occurrences(2, [1, 2, 2, 3, 2]))   # 3
-    print(is_sorted([1, 2, 3, 3.5, 4]))   # True
+    print(is_sorted([2, 2, 3]))   # True
     print(Rectangle(3, 4).area())     # 12
     r = Rectangle(3,4)
     print(r)
